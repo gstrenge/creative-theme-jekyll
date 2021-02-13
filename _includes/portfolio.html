@@ -1,7 +1,7 @@
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
-            {% assign sortedProjects = site.projects | sort: 'date' % | reverse}
+            {% assign sortedProjects = site.projects | sort: 'date' | reverse %}
             {% for project in sortedProjects %}
             {% assign dashedTitle = project.relative_path | split: "/" | last | split: "." | first %}
             <div class="col-lg-4 col-sm-6">
