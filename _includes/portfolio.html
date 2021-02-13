@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row no-gutter">
             {% assign sortedProjects = site.projects | sort: 'date' %}
-            {% for project in site.projects %}
+            {% for project in sortedProjects %}
             {% assign dashedTitle = project.relative_path | split: "/" | last | split: "." | first %}
             <div class="col-lg-4 col-sm-6">
                 <a href="projects/{{ dashedTitle }}" class="portfolio-box">
