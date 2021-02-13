@@ -1,7 +1,7 @@
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
-            {% for project in site.project_names %}
+            {% for project in site.projects %}
             <div class="col-lg-4 col-sm-6">
                 <a href="projects/{{ project.title }}" class="portfolio-box">
                     <img src="/img/portfolio/{{ project.title }}.{{ project.filetype }}" class="img-responsive" alt="{{project.title}}" onerror="this.src='img/portfolio/TBD.png'">
@@ -11,7 +11,7 @@
                                 {{ project.title | replace: "-", " " }}
                             </div>
                             <div class="project-name">
-                                {{ project.description }}
+                                {{ project.relative_path }}
                             </div>
                         </div>
                     </div>
