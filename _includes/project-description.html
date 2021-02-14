@@ -7,12 +7,16 @@
                 <p class="text-faded">
                     {{ page.content | markdownify }}
                 </p>
-
+                
+                {% for video in page.videos %}
+                <h2 class="section-heading text-center">{{ video.title }}</h2>
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="{{ page.youtubelink }}" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="{{ video.link }}" allowfullscreen></iframe>
                 </div>
+                <br>
+                {% endfor %}
                 <div>
-                    <a href="/#portfolio" class="btn btn-default btn-xl page-scroll">View Other Projects</a>
+                    <a href="/#portfolio" class="btn btn-default btn-xl page-scroll center-block">View Other Projects</a>
                 </div>
                 
             </div>
